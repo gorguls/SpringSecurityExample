@@ -15,7 +15,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/securedPage">Secured page</a>
@@ -33,7 +33,7 @@
 <div class="container text-center m-2">
     <div class="row">
         <div class="col">
-            <h1> Free for all page</h1>
+            <h1>Administrators only</h1>
         </div>
     </div>
 </div>

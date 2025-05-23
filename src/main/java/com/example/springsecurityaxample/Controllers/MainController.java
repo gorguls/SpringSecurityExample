@@ -7,7 +7,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MainController {
 
     @GetMapping("/")
-    public String MainController() {
-        return "mainpage";
+    public String mainPage() {
+        return "mainPage";
     }
+
+    @GetMapping("/securedPage")
+    public String securedPage() {
+        return "securedPage";
+    }
+
+    @GetMapping("/administration")
+    public String adminPage() {
+        return "administration";
+    }
+
 }

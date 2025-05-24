@@ -4,13 +4,12 @@ import com.example.springsecurityaxample.DB.DAO.Repositories.UserRepository;
 import com.example.springsecurityaxample.DB.DAO.Roles;
 import com.example.springsecurityaxample.DB.DAO.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.Collection;
 import java.util.Collections;
 
 @Controller
@@ -18,6 +17,9 @@ public class registrationController {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @GetMapping("/registration")
     public String registrationPage() {
@@ -33,7 +35,7 @@ public class registrationController {
         }
 
         user.setActiv(true);
-        user.setPassword(user.getPassword());
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setRoles(Collections.singleton(Roles.USER));
         userRepository.save(user);
         return "redirect:/login";

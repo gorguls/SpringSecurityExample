@@ -23,8 +23,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/administration">Administration</a>
                     </li>
-
                 </ul>
+                <form action="/logout" method="post">
+                    <input type="hidden" name="_csrf" value="${_csrf.token}">
+                    <button type="submit" class="btn btn-primary">Выйти</button>
+                </form>
             </div>
         </div>
     </nav>

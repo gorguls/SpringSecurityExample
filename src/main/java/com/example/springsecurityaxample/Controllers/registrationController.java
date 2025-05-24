@@ -1,6 +1,6 @@
 package com.example.springsecurityaxample.Controllers;
 
-import com.example.springsecurityaxample.DB.DAO.Repositories.UserRepository;
+import com.example.springsecurityaxample.DB.Repositories.UserRepository;
 import com.example.springsecurityaxample.DB.DAO.Roles;
 import com.example.springsecurityaxample.DB.DAO.User;
 import org.springframework.beans.factory.annotation.Autowired;

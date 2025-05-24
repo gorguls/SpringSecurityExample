@@ -1,6 +1,6 @@
 package com.example.springsecurityaxample.Services;
 
-import com.example.springsecurityaxample.DB.DAO.Repositories.UserRepository;
+import com.example.springsecurityaxample.DB.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

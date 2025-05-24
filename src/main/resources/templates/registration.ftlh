@@ -6,6 +6,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-4">
+                <#if errorMessage??> <div> ${errorMessage}</div></#if>
                 <form action="/registration" method="post">
 
                     <input type="hidden" name="_csrf" value="${_csrf.token}">

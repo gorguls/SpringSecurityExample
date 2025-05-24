@@ -16,9 +16,4 @@ public class MainController {
         return "securedPage";
     }
 
-    @GetMapping("/administration")
-    public String adminPage() {
-        return "administration";
-    }
-
 }

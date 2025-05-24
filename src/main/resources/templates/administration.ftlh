@@ -5,4 +5,9 @@
             <h1>Administrators only</h1>
         </div>
     </div>
+    <div class="row">
+        <ul>
+            <li><a href="administration/users">Список пользователей</a></li>
+        </ul>
+    </div>
 </@c.page>

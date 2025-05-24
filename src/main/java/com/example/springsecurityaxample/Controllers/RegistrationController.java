@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.util.Collections;
 
 @Controller
-public class registrationController {
+public class RegistrationController {
 
     @Autowired
     private UserRepository userRepository;
@@ -28,8 +28,8 @@ public class registrationController {
 
     @PostMapping("/registration")
     public String addUser(User user, Model model) {
-        User userGromDB = userRepository.findByUsername(user.getUsername());
-        if (userGromDB != null) {
+        User userFromDB = userRepository.findByUsername(user.getUsername());
+        if (userFromDB != null) {
             model.addAttribute("errorMessage", "This username is already taken");
             return "registration";
         }
@@ -38,6 +38,7 @@ public class registrationController {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setRoles(Collections.singleton(Roles.USER));
         userRepository.save(user);
+
         return "redirect:/login";
     }
 }

@@ -90,6 +90,10 @@ public class User implements UserDetails {
         this.roles = roles;
     }
 
+    public boolean isAdmin() {
+        return roles.contains(Roles.ADMIN);
+    }
+
     @Override
     public String toString() {
         return "User{" +

@@ -23,6 +23,5 @@
             </#list>
             </tbody>
         </table>
-
     </div>
 </@c.page>

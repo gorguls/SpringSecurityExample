@@ -47,9 +47,8 @@ public class WebSeurityConfig{
                 .authorizeHttpRequests((requests) -> requests
                         .requestMatchers("/").permitAll()
                         .requestMatchers("/registration").permitAll()
-                        .requestMatchers("/administration").hasAuthority("ADMIN")
+//                        .requestMatchers("/administration").hasAuthority("ADMIN")
                         .anyRequest().authenticated()
-
                 )
                 .formLogin((form) -> form
                         .loginPage("/login")
